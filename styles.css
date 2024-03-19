@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-.first {
+.calculator-row {
     display: flex;
     justify-content: stretch;
     align-items: stretch;
