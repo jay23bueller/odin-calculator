@@ -12,6 +12,7 @@ let resetDisplay = false;
 */
 numericButtons.forEach((elem) => 
     elem.addEventListener("click",() => {
+        if(display.textContent.length === 25) return;
         if(display.textContent === "0" || resetDisplay){
             display.textContent = elem.value;
             resetDisplay = false;
@@ -58,7 +59,7 @@ operatorButtons.forEach((elem) =>
                 if(operand1 !== undefined && operator !== undefined) {
                     operand2 = +display.textContent;
                     operand1 = mathFunctions[operator](operand1,operand2);
-                    operator = elem.value === "equal" ? operator : elem.value;
+                    operator = elem.value.includes("equal") || elem.value.includes(".") ? operator : elem.value;
                     operand2 = undefined;
                     display.textContent = operand1;
                     
@@ -74,5 +75,13 @@ operatorButtons.forEach((elem) =>
                 operand2 = undefined;
                 operator = undefined;
                 display.textContent = '0';
+                break;
+            case "percent":
+                display.textContent = +display.textContent * .10;
+                break;
+            case ".":
+                if(!display.textContent.includes(".")) display.textContent = display.textContent.concat(".");
+            case "toggle":
+                display.textContent = +display.textContent * -1;
         }
     }));

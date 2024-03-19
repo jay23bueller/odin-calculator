@@ -6,24 +6,48 @@
     </head>
     <body>
         <!--temporary calculator-->
-        <p id="display">0</p>
-        <button class="number" value="0" type="button">0</button>
-        <button class="number" value="1" type="button">1</button>
-        <button class="number" value="2" type="button">2</button>
-        <button class="number" value="3" type="button">3</button>
-        <button class="number" value="4" type="button">4</button>
-        <button class="number" value="5" type="button">5</button>
-        <button class="number" value="6" type="button">6</button>
-        <button class="number" value="7"type="button">7</button>
-        <button class="number" value="8" type="button">8</button>
-        <button class="number" value="9" type="button">9</button>
-        <button class="operator" value="add" type="button">+</button>
-        <button class="operator" value="subtract" type="button">-</button>
-        <button class="operator" value="divide" type="button">/</button>
-        <button class="operator" value="multiply" type="button">*</button>
-        <button class="operator" value="equal" type="button">=</button>
-        <button class="operator" value="clear" type="button">clear</button>
-
+        <div id="calculator">
+            <!--display-->
+            <div class="calculator-row">
+                <p id="display">0</p>
+            </div>
+            
+            <!--first row-->
+            <div class="calculator-row">
+                <button class="operator button" value="clear">AC</button>
+                <button class="operator button" value="toggle">+/-</button>
+                <button class="operator button" value="percent">%</button>
+                <button class="operator button" value="divide">/</button>
+            </div>
+            <!--second row-->
+            <div class="calculator-row">
+                <button class="number button" value="7">7</button>
+                <button class="number button" value="8">8</button>
+                <button class="number button" value="9">9</button>
+                <button class="operator button" value="multiply">x</button>
+            </div>
+            <!--third row-->
+            <div class="calculator-row">
+                <button class="number button" value="4">4</button>
+                <button class="number button" value="5">5</button>
+                <button class="number button" value="6">6</button>
+                <button class="operator button" value="subtract">-</button>
+            </div>
+            <!--fourth row-->
+            <div class="calculator-row">
+                <button class="number button" value="1">1</button>
+                <button class="number button" value="2">2</button>
+                <button class="number button" value="3">3</button>
+                <button class="operator button" value="add">+</button>
+            </div>
+            <!--fifth row-->
+            <div class="calculator-row">
+                <button class="number button" value="0">0</button>
+                <button class="operator button" value=".">.</button>
+                <button class="operator button" value="equal">=</button>
+            </div>
+        </div>
+    
         <script src="./script.js"></script>
         <link rel="stylesheet" href="./styles.css">
     </body>
